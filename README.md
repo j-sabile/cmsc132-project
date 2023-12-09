@@ -1,3 +1,6 @@
+# CMSC132 Project
+
+This project involves implementing a Verilog hardware description language. The goal is to create a single-cycle, fixed-opcode Verilog implementation that can process an 18-bit input. The input consists of two most significant bits (MSB) representing the opcode, and two eight-bit operands. The output is an eight-bit value.
 
 ## How To Use
 
