@@ -1,4 +1,4 @@
-module xor_component_tb;
+module main_design_tb;
 
   // Inputs
   reg [1:0] opcode;
@@ -14,25 +14,25 @@ module xor_component_tb;
   initial begin
   
     // Test case 1
-    opcode = 2'b01;
-    a = 8'b00000000;
-    b = 8'b00000000;
+    opcode = 2'b11;
+    a = 8'b10000000;
+    b = 8'b00000001;
     #5 $display("Test case 1: opcode = %b, a = %b, b = %b, out = %b", opcode, a, b, out);
 
     // Test case 2
-    opcode = 2'b01;
+    opcode = 2'b11;
     a = 8'b00000001;
     b = 8'b00000000;
     #5 $display("Test case 2: opcode = %b, a = %b, b = %b, out = %b", opcode, a, b, out);
 
     // Test case 3
-    opcode = 2'b01;
-    a = 8'b00000001;
-    b = 8'b00000001;
+    opcode = 2'b11;
+    a = 8'b10101010;
+    b = 8'b01010101;
     #5 $display("Test case 3: opcode = %b, a = %b, b = %b, out = %b", opcode, a, b, out);
 
     // Test case 4
-    opcode = 2'b01;
+    opcode = 2'b11;
     a = 8'b00011111;
     b = 8'b00010001;
     #5 $display("Test case 4: opcode = %b, a = %b, b = %b, out = %b", opcode, a, b, out);
