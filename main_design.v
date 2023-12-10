@@ -10,8 +10,8 @@ module main_design (input wire [1:0] opcode, input wire [7:0] a, b, output reg [
 
   always @(*) begin
     case (opcode)
-      2'b00: out = temp_out_xor; // If opcode is "00", use the output of xor_component
-      2'b01: out = temp_out_adder;
+      2'b00: out = temp_out_adder; // If opcode is "00", use the full_adder_component
+      2'b01: out = temp_out_xor; // If opcode is "01", use the xor_component
       default: out = temp_out_nand; // For other opcodes, use the output of nand_component
     endcase
   end
